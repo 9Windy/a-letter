@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+       body {
+        /* background-image: linear-gradient(to right, skyblue,white); */
+        background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.b04695e3bf95ba052d62906daec1432c?rik=lwM7Z7u%2fxaOpgA&riu=http%3a%2f%2fi4.3conline.com%2fimages%2fpiclib%2f201108%2f12%2fbatch%2f1%2f105725%2f13131578260588agd5c9xf7.jpg&ehk=9YAhiq2lyOdI9ZGNc02XUBFjrkViq4LGCSI04YZqIsU%3d&risl=&pid=ImgRaw&r=0);
+        background-size: cover;
+    }
+
+        * {
+        
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            
+        }
+
+        .box {
+            display: none;
+        }
+
+       .print {
+          color:black;
+          margin:10px auto;
+          width: 450px;
+          height: 700px;
+          font-size: 18px;
+          font-family: "楷体"; 
+          background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.14e8a71b1386257c776ef274fd14d816?rik=x7nCOs4cdZcTeQ&riu=http%3a%2f%2fpicapi.zhituad.com%2fphoto%2f348%2f89%2f56BBC.jpg&ehk=yGdL32r2sm49wzKEyci7dmgH2a8Y6zvxuYctcj1m6dY%3d&risl=&pid=ImgRaw&r=0);
+          background-size: 450px  700px;
+          position: relative;
+          font-weight: 600;
+        }
+        .inside {
+
+            position: absolute;
+            width: 285px;
+            height: 500px;
+            top: 80px; 
+            left: 75px;
+            line-height: 22px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class = "box">你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</div>
+    <div class="print">
+        <div class="inside">
+        </div>
+    </div>
+    <script>
+        let box = document.querySelector(".box")
+        let print = document.querySelector(".print")
+        let inside = document.querySelector(".inside")
+        let str = box.innerHTML
+        let len = str.length
+       
+        let i = 0
+        let time = setInterval(function(){
+            if(i < len){
+                inside.innerHTML= "&nbsp&nbsp" + str.substring(0,i + 1)  + '_'  +'🖊'
+            }
+            else {
+                clearInterval(time)
+            }
+            i++
+        },100)
+        //动态写字 end
+    </script>
+</body>
+</html>
